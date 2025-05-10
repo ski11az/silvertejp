@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class Vase : MonoBehaviour
 {
-    [SerializeField] Shard[] shards;
-
-    int shardToAttach = 0;
+    [SerializeField] List<Shard> shards;
 
     [SerializeField] float posMargin = 0.1f;
     [SerializeField] float rotMargin = 10.0f;
@@ -25,19 +23,7 @@ public class Vase : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (AttachShard(shards[shardToAttach]))
-            {
-                shardToAttach++;
-            }
-        }
-    }
-
-    public bool AttachShard(Shard shard)
+    public void AttachShard(Shard shard)
     {
         Transform shardTf = shard.transform;
 
@@ -47,13 +33,10 @@ public class Vase : MonoBehaviour
         if (CalcPosDiff(shardTf.localPosition, destPos) < posMargin &&
             CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot) < rotMargin)
         {
-            shard.Deactivate();
             shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
-
-            return true;
         }
-
-        return false;
+        
+        shard.Attach();
     }
     
     float CalcPosDiff(Vector3 current, Vector3 target)
@@ -67,5 +50,10 @@ public class Vase : MonoBehaviour
         if (diff > 180) diff = 360 - diff;
 
         return diff;
+    }
+
+    public List<Shard> GetShards() // NOTE: May need to clear vase's list when detaching so this should maybe return copy
+    {
+        return shards;
     }
 }

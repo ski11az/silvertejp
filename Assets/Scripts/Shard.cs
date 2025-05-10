@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Shard : MonoBehaviour
 {
+    public bool isAttached = false;
     Rigidbody2D rb;
 
     private void Awake()
@@ -20,12 +21,9 @@ public class Shard : MonoBehaviour
         
     }
 
-    public void Deactivate()
+    public void Attach()
     {
         Destroy(rb);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+        isAttached = true;
     }
 }

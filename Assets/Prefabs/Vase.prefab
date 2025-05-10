@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1999690161900271394}
   - component: {fileID: 2451255107102253032}
   - component: {fileID: 8743398383677970483}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &1999690161900271394
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -227,7 +228,8 @@ GameObject:
   - component: {fileID: 8720936888578977507}
   - component: {fileID: 4156316182094734313}
   - component: {fileID: 5821032771997742316}
-  m_Layer: 0
+  - component: {fileID: 6983691859315919690}
+  m_Layer: 9
   m_Name: PH_Vase1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,6 +372,19 @@ PolygonCollider2D:
       - {x: 1.345, y: -0.565}
       - {x: 1.495, y: -0.505}
   m_UseDelaunayMesh: 0
+--- !u!114 &6983691859315919690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961397821889470726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttached: 1
 --- !u!1 &2101066197084089305
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +398,7 @@ GameObject:
   - component: {fileID: 5027248826052903593}
   - component: {fileID: 6541512310993609239}
   - component: {fileID: 750594519342211715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &5027248826052903593
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -585,7 +601,7 @@ GameObject:
   - component: {fileID: 8256072061292258203}
   - component: {fileID: 608339193897418026}
   - component: {fileID: 1981201728844279541}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,6 +635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &8256072061292258203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -802,7 +819,7 @@ GameObject:
   - component: {fileID: 133664359166281922}
   - component: {fileID: 6851153740174264156}
   - component: {fileID: 1378530455901504517}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,6 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &133664359166281922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1090,7 +1108,7 @@ GameObject:
   - component: {fileID: 999354228094185936}
   - component: {fileID: 3464010214003113183}
   - component: {fileID: 1673827023560976752}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,6 +1142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &999354228094185936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1287,7 +1306,7 @@ GameObject:
   - component: {fileID: 2693005394865082012}
   - component: {fileID: 4435442535094666262}
   - component: {fileID: 1941028421345925012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,6 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &2693005394865082012
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1501,7 +1521,7 @@ GameObject:
   - component: {fileID: 8163885502610037820}
   - component: {fileID: 3139944241807243119}
   - component: {fileID: 3372491574434621383}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PH_Vase1_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1535,6 +1555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAttached: 0
 --- !u!212 &8163885502610037820
 SpriteRenderer:
   m_ObjectHideFlags: 0
