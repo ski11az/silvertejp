@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     float timeOfLastSpawn = 0;
     int shardToSpawn = 0;
+    [SerializeField] float spawnHeight = 5;
+    [SerializeField] float spawnOffsetScaler = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +35,7 @@ public class GameManager : MonoBehaviour
         if (shardToSpawn < shards.Count && Time.time > timeOfLastSpawn + 5)
         {
             Shard spawnedShard = shards[shardToSpawn];
-            spawnedShard.transform.position = new Vector3(0, 5, 0);
+            spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
             spawnedShard.gameObject.SetActive(true);
             shardToSpawn++;
             timeOfLastSpawn = Time.time;

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Shard : MonoBehaviour
 {
     public bool isAttached = false;
+    Vase parentVase = null;
     Rigidbody2D rb;
 
     private void Awake()
@@ -10,20 +11,15 @@ public class Shard : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Attach()
+    public void Attach(Vase vase)
     {
         Destroy(rb);
         isAttached = true;
+        parentVase = vase;
+    }
+
+    public void Detach()
+    {
+        parentVase = null;
     }
 }

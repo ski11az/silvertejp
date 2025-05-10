@@ -36,7 +36,7 @@ public class Vase : MonoBehaviour
             shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
         }
         
-        shard.Attach();
+        shard.Attach(this);
     }
     
     float CalcPosDiff(Vector3 current, Vector3 target)
