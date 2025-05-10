@@ -46,3 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vase: {fileID: 0}
   clickRadius: 1
+  spawnHeight: 5
+  spawnOffsetScaler: 3
