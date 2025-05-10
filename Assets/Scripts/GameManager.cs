@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
         if (shardToSpawn < shards.Count && Time.time > timeOfLastSpawn + 5)
         {
