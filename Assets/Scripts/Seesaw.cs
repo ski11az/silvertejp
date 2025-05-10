@@ -13,9 +13,6 @@ public class Seesaw : MonoBehaviour
     {
         Debug.Log("Shit works");
         m_Rigidbody = GetComponent<Rigidbody2D>();
-
-        //Set the angular velocity of the Rigidbody (rotating around the Y axis, 100 deg/sec)
-        m_EulerAngleVelocity = new Vector3(0, 100, 0);
     }
 
     // Update is called once per frame
@@ -23,7 +20,8 @@ public class Seesaw : MonoBehaviour
     {
 
         float horizontal = Input.GetAxis("Horizontal");
-
-        m_Rigidbody.rotation += horizontal*speed;
+        float currentAngle = m_Rigidbody.rotation;
+        float newAngle = currentAngle + horizontal * speed;
+        m_Rigidbody.MoveRotation(newAngle);
     }
 }
