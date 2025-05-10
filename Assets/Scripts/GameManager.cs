@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour
             timeOfLastSpawn = Time.time;
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            TryAttachShard();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    TryAttachShard();
+        //}
     }
 
     private void TryAttachShard()

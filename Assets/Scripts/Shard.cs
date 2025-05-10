@@ -3,6 +3,8 @@ using UnityEngine;
 public class Shard : MonoBehaviour
 {
     public bool isAttached = false;
+
+    [SerializeField, Tooltip("Must be defined for base shard.")]
     Vase parentVase = null;
     Rigidbody2D rb;
     static float maxSpeed = 3f;
@@ -38,5 +40,16 @@ public class Shard : MonoBehaviour
     {
         parentVase = null;
         transform.parent = null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (parentVase) return;
+
+        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Shard")) return; // Has to get layer through collider. gameObject has layer of root rb (Vase)
+
+        Shard collidedShard = collision.collider.GetComponent<Shard>();
+        collidedShard.parentVase.AttachShard(this);
+        Attach(collidedShard.parentVase);
     }
 }

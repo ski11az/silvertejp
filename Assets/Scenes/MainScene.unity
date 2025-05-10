@@ -1292,18 +1292,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1343,17 +1331,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5800398840506345878, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
       propertyPath: m_Name
       value: Vase
-      objectReference: {fileID: 0}
-    - target: {fileID: 7936350852968086573, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LinearDrag
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1491,10 +1471,6 @@ PrefabInstance:
       propertyPath: vase
       value: 
       objectReference: {fileID: 840219825}
-    - target: {fileID: 6414518457503392492, guid: 4b0a8122e1c74c842aa599254c6a5e30, type: 3}
-      propertyPath: spawnOffsetScaler
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

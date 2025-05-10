@@ -15,7 +15,7 @@ public class Vase : MonoBehaviour
     List<Shard> attachedShards = new(); // Contains shards currently attached to the vase during play
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         InitializeShards();
     }
@@ -33,6 +33,10 @@ public class Vase : MonoBehaviour
 
     public void AttachShard(Shard shard)
     {
+        // Must be attached first to get correct localTranform values
+        attachedShards.Add(shard);
+        shard.Attach(this);
+
         Transform shardTf = shard.transform;
 
         Vector3 destPos = posByShard[shard];
@@ -41,6 +45,7 @@ public class Vase : MonoBehaviour
         float posDelta = CalcPosDiff(shardTf.localPosition, destPos); // This can also be used for scoring
         float rotDelta = CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot); // This can also be used for scoring
 
+
         if (posDelta < posMargin && rotDelta < rotMargin)
         {
             shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
@@ -48,8 +53,6 @@ public class Vase : MonoBehaviour
             rotDelta = 0;
         }
 
-        attachedShards.Add(shard);
-        shard.Attach(this);
     }
     
     float CalcPosDiff(Vector3 current, Vector3 target)
