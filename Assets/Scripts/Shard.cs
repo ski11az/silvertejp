@@ -27,12 +27,16 @@ public class Shard : MonoBehaviour
         Destroy(rb);
         isAttached = true;
         parentVase = vase;
-        //maxSpeed = maxSpeed + 0.5;
-        Debug.Log(maxSpeed);
+        transform.parent = vase.transform;
     }
 
+    /// <summary>
+    /// Detaches shard from parent Vase object. Can only be used once at start of play.
+    /// Rigidbody gets removed by Attach() but does not get readded by Detach().
+    /// </summary>
     public void Detach()
     {
         parentVase = null;
+        transform.parent = null;
     }
 }
