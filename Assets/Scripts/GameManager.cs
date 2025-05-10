@@ -21,10 +21,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PrepareShards();
+    }
+
+    private void PrepareShards()
+    {
         shards = vase.GetShards();
 
         foreach (Shard shard in shards)
         {
+            shard.Detach();
             shard.gameObject.SetActive(false); // Could cause problems with execution order with Vase filling dictionaries
         }
     }

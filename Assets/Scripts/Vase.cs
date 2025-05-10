@@ -1,18 +1,26 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Vase : MonoBehaviour
 {
-    [SerializeField] List<Shard> shards;
+    [SerializeField] List<Shard> shards; // Contains shards belonging to this vase
 
     [SerializeField] float posMargin = 0.1f;
     [SerializeField] float rotMargin = 10.0f;
 
     Dictionary<Shard, Vector3> posByShard = new(); // Stores original local positions of shards relative vase
     Dictionary<Shard, float> rotByShard = new(); // Stores original local ritations of shards relative vase
+    
+    List<Shard> attachedShards = new(); // Contains shards currently attached to the vase during play
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
+    {
+        InitializeShards();
+    }
+
+    private void InitializeShards()
     {
         foreach (Shard shard in shards)
         {
@@ -30,12 +38,17 @@ public class Vase : MonoBehaviour
         Vector3 destPos = posByShard[shard];
         float destRot = rotByShard[shard];
 
-        if (CalcPosDiff(shardTf.localPosition, destPos) < posMargin &&
-            CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot) < rotMargin)
+        float posDelta = CalcPosDiff(shardTf.localPosition, destPos); // This can also be used for scoring
+        float rotDelta = CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot); // This can also be used for scoring
+
+        if (posDelta < posMargin && rotDelta < rotMargin)
         {
             shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
+            posDelta = 0;
+            rotDelta = 0;
         }
-        
+
+        attachedShards.Add(shard);
         shard.Attach(this);
     }
     
@@ -52,8 +65,12 @@ public class Vase : MonoBehaviour
         return diff;
     }
 
+    /// <summary>
+    /// Returns a copy of the list containing attached Shards.
+    /// </summary>
+    /// <returns></returns>
     public List<Shard> GetShards() // NOTE: May need to clear vase's list when detaching so this should maybe return copy
     {
-        return shards;
+        return new List<Shard>(shards);
     }
 }
