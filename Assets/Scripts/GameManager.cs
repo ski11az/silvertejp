@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public static event Action<int> ScoreChanged;
+    public static event Action AllShardsUsed;
 
     [SerializeField] Vase vasePrefab;
     [SerializeField] DeliveryBox deliveryBox;
@@ -79,13 +80,19 @@ public class GameManager : MonoBehaviour
 
     private void TrySpawnShard()
     {
-        if (currentShards.Count > 0 && Time.time > timeOfLastShardSpawn + 5)
+        if (Time.time < timeOfLastShardSpawn + 5) return;
+
+        timeOfLastShardSpawn = Time.time;
+
+        if (currentShards.Count <= 0)
         {
-            Shard spawnedShard = currentShards[0];
-            spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
-            spawnedShard.gameObject.SetActive(true);
-            timeOfLastShardSpawn = Time.time;
-            currentShards.RemoveAt(0);
+            AllShardsUsed?.Invoke();
+            return;
         }
+
+        Shard spawnedShard = currentShards[0];
+        spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
+        spawnedShard.gameObject.SetActive(true);
+        currentShards.RemoveAt(0);
     }
 }
