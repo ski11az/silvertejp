@@ -3,6 +3,7 @@ using UnityEngine;
 public class Shard : MonoBehaviour
 {
     [SerializeField] AudioClip collisionSound;
+    [SerializeField] GameObject ductTapePrefab;
 
     public bool isAttached = false;
 
@@ -53,7 +54,20 @@ public class Shard : MonoBehaviour
         AudioManager.Instance.PlayClip(collisionSound);
 
         Shard collidedShard = collision.collider.GetComponent<Shard>();
+
         collidedShard.parentVase.AttachShard(this);
         Attach(collidedShard.parentVase);
+
+        Vector3 pos1 = transform.position;
+        Vector3 pos2 = collidedShard.transform.position;
+
+        Vector3 midpoint = (pos1 + pos2) * 0.5f;
+        float dist = (pos2 - pos1).magnitude;
+        Vector3 right = (pos2 - pos1).normalized;
+
+        GameObject spawnedTape = Instantiate(ductTapePrefab, parentVase.transform);
+        spawnedTape.transform.position = collision.contacts[0].point;
+        spawnedTape.transform.right = right;
+        //spawnedTape.transform.localScale = new Vector3(.35f, 1, 1);
     }
 }
