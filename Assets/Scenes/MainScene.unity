@@ -431,6 +431,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4592572279667414959, guid: 4b0a8122e1c74c842aa599254c6a5e30, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: dcbde9ad76e325947add4ad085742638, type: 3}
     - target: {fileID: 5063383097892588378, guid: 4b0a8122e1c74c842aa599254c6a5e30, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -452,10 +456,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -494,10 +494,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
-      propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8659998967369291537, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
