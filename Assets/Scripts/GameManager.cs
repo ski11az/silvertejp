@@ -9,48 +9,62 @@ public class GameManager : MonoBehaviour
 {
     public static event Action<int> ScoreChanged;
 
-    [SerializeField] Vase vase;
+    [SerializeField] Vase vasePrefab;
     [SerializeField] DeliveryBox deliveryBox;
+    [SerializeField] ShatterBox shatterBox;
+
     [SerializeField] float clickRadius = 1.0f;
 
     [SerializeField] float spawnHeight = 5;
     [SerializeField] float spawnOffsetScaler = 1;
-    List<Shard> shards;
 
+    Vase currentVase;
+    List<Shard> currentShards;
 
-    Plane gamePlane = new(Vector3.forward, Vector3.zero);
-
-    float timeOfLastSpawn = 0;
-    int shardToSpawn = 0;
+    float timeOfLastShardSpawn = 0;
 
     private int score = 0;
 
     private void OnEnable()
     {
         deliveryBox.VaseDelivered += IncreaseScore;
+        shatterBox.VaseDestroyed += StartNewVase;
+    }
+
+    private void OnDisable()
+    {
+        deliveryBox.VaseDelivered -= IncreaseScore;
+        shatterBox.VaseDestroyed -= StartNewVase;
     }
 
     private void IncreaseScore(int value)
     {
         score += value;
         ScoreChanged?.Invoke(score);
+        StartNewVase();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        PrepareShards();
+        StartNewVase();
         ScoreChanged?.Invoke(score);
+    }
+
+    private void StartNewVase()
+    {
+        currentVase = Instantiate(vasePrefab, new Vector3(0, spawnHeight, 0), Quaternion.identity);
+        PrepareShards();
     }
 
     private void PrepareShards()
     {
-        shards = vase.GetShards();
+        currentShards = currentVase.GetShards();
 
-        foreach (Shard shard in shards)
+        foreach (Shard shard in currentShards)
         {
             shard.Detach();
-            shard.gameObject.SetActive(false); // Could cause problems with execution order with Vase filling dictionaries
+            //shard.gameObject.SetActive(false); // Could cause problems with execution order with Vase filling dictionaries
         }
     }
 
@@ -60,48 +74,18 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
 
-        if (shardToSpawn < shards.Count && Time.time > timeOfLastSpawn + 5)
-        {
-            Shard spawnedShard = shards[shardToSpawn];
-            spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
-            spawnedShard.gameObject.SetActive(true);
-            shardToSpawn++;
-            timeOfLastSpawn = Time.time;
-        }
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    TryAttachShard();
-        //}
+        TrySpawnShard();
     }
 
-    private void TryAttachShard()
+    private void TrySpawnShard()
     {
-        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        gamePlane.Raycast(mouseRay, out float rayDist);
-        Vector3 hitPos = mouseRay.GetPoint(rayDist);
-        Collider2D[] cols = Physics2D.OverlapCircleAll(hitPos, clickRadius, 1 << LayerMask.NameToLayer("Shard"));
-
-        Shard fallingShard = null;
-        Shard closestShard = null;
-        float closestDist = 2 * clickRadius; // Set arbitrary starting distance to compare first shard with
-
-        foreach (Collider2D col in cols)
+        if (currentShards.Count > 0 && Time.time > timeOfLastShardSpawn + 5)
         {
-            Shard currentShard = col.GetComponent<Shard>();
-            float currentDist = Vector3.Magnitude(currentShard.transform.position - hitPos);
-
-            // Find 1 falling shard and 1 attached shard in clicked region
-            if (currentShard.isAttached == false) fallingShard = currentShard;
-            else if (currentDist < closestDist)
-            {
-                closestDist = currentDist;
-                closestShard = currentShard;
-            }
+            Shard spawnedShard = currentShards[0];
+            spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
+            spawnedShard.gameObject.SetActive(true);
+            timeOfLastShardSpawn = Time.time;
+            currentShards.RemoveAt(0);
         }
-
-        if (!fallingShard || !closestShard) return; // Stop if either is not found
-
-        vase.AttachShard(fallingShard);
     }
 }

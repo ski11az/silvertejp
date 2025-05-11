@@ -18,6 +18,11 @@ public class Shard : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (transform.position.y < -20.0f) Destroy(gameObject);
+    }
+
     void FixedUpdate()
     {
         // Limits 

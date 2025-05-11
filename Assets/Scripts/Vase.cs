@@ -17,8 +17,6 @@ public class Vase : MonoBehaviour
     List<Shard> attachedShards = new(); // Contains shards currently attached to the vase during play
 
     [SerializeField] int score = 0;
-    public static event Action ScoreEvent;
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -26,6 +24,9 @@ public class Vase : MonoBehaviour
         InitializeShards();
     }
 
+    /// <summary>
+    /// Populates the shard dictionaries and sets all shards to inactive to avoid collisions between them.
+    /// </summary>
     private void InitializeShards()
     {
         foreach (Shard shard in shards)
@@ -34,6 +35,8 @@ public class Vase : MonoBehaviour
 
             posByShard.Add(shard, tf.localPosition);
             rotByShard.Add(shard, tf.localRotation.eulerAngles.z);
+
+            shard.gameObject.SetActive(false);
         }
     }
 
