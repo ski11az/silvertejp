@@ -7,22 +7,40 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
+    public static event Action<int> ScoreChanged;
+
     [SerializeField] Vase vase;
+    [SerializeField] DeliveryBox deliveryBox;
     [SerializeField] float clickRadius = 1.0f;
 
+    [SerializeField] float spawnHeight = 5;
+    [SerializeField] float spawnOffsetScaler = 1;
     List<Shard> shards;
+
 
     Plane gamePlane = new(Vector3.forward, Vector3.zero);
 
     float timeOfLastSpawn = 0;
     int shardToSpawn = 0;
-    [SerializeField] float spawnHeight = 5;
-    [SerializeField] float spawnOffsetScaler = 1;
+
+    private int score = 0;
+
+    private void OnEnable()
+    {
+        deliveryBox.VaseDelivered += IncreaseScore;
+    }
+
+    private void IncreaseScore(int value)
+    {
+        score += value;
+        ScoreChanged?.Invoke(score);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         PrepareShards();
+        ScoreChanged?.Invoke(score);
     }
 
     private void PrepareShards()
