@@ -9,7 +9,9 @@ public class Seesaw : MonoBehaviour
     [SerializeField] float speed = 100;
     [SerializeField] AudioClip left_seesaw;
     [SerializeField] AudioClip right_seesaw;
+    [SerializeField] AudioClip thud;
     [SerializeField] float volume = 1;
+    bool PlaySound = true;
 
 
     // Start is called before the first frame update
@@ -40,5 +42,24 @@ public class Seesaw : MonoBehaviour
         float currentAngle = m_Rigidbody.rotation;
         float newAngle = currentAngle + horizontal * speed;
         m_Rigidbody.MoveRotation(newAngle);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Bad way to prevent thump sound from being played too much
+        if (PlaySound == true)
+        {
+            AudioManager.Instance.PlayClip(thud, volume);
+
+            PlaySound = false;
+            StartCoroutine(Wait());
+
+        }
+ 
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2.0f);
+        PlaySound = true;
     }
 }

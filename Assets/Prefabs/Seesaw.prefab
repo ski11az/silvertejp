@@ -129,6 +129,7 @@ MonoBehaviour:
   speed: 7.5
   left_seesaw: {fileID: 8300000, guid: 7673350e377dc4700be459f43789fb9e, type: 3}
   right_seesaw: {fileID: 8300000, guid: a7998f5b69519490f94bbc8531d56fe4, type: 3}
+  thud: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   volume: 1
 --- !u!61 &863881665853562147
 BoxCollider2D:
