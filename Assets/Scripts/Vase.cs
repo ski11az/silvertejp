@@ -82,7 +82,7 @@ public class Vase : MonoBehaviour
     /// <returns></returns>
     public int GetScore()
     {
-        return score * 10 + Random.Range(0, 10);
+        return score * 10 + UnityEngine.Random.Range(0, 10);
     }
 
     /// <summary>
