@@ -1291,6 +1291,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 766286016360157589, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 1840270753147263880, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 2611003631887678840, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 2675628007517332795, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 3906014960439675114, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 5755995234723116283, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
     - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1335,6 +1359,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vase
       objectReference: {fileID: 0}
+    - target: {fileID: 6983691859315919690, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+    - target: {fileID: 8666347249975038482, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
+      propertyPath: ductTapePrefab
+      value: 
+      objectReference: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
