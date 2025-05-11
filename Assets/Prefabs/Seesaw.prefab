@@ -31,7 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7.5
+  left_seesaw: {fileID: 8300000, guid: 7673350e377dc4700be459f43789fb9e, type: 3}
+  right_seesaw: {fileID: 8300000, guid: a7998f5b69519490f94bbc8531d56fe4, type: 3}
+  volume: 1
 --- !u!61 &863881665853562147
 BoxCollider2D:
   m_ObjectHideFlags: 0

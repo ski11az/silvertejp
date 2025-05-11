@@ -7,6 +7,10 @@ public class Seesaw : MonoBehaviour
     Rigidbody2D m_Rigidbody;
     Vector3 m_EulerAngleVelocity;
     [SerializeField] float speed = 100;
+    [SerializeField] AudioClip left_seesaw;
+    [SerializeField] AudioClip right_seesaw;
+    [SerializeField] float volume = 1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +19,19 @@ public class Seesaw : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody2D>();
     }
 
+
+    void Update()
+    {
+        // Play crank sound when turning seesaw
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            AudioManager.Instance.PlayClip(left_seesaw, volume);
+        }
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            AudioManager.Instance.PlayClip(right_seesaw, volume);
+        }
+    }
     // Update is called once per frame
     void FixedUpdate()
     {
