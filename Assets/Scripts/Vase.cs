@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
+
 
 public class Vase : MonoBehaviour
 {
@@ -13,6 +15,10 @@ public class Vase : MonoBehaviour
     Dictionary<Shard, float> rotByShard = new(); // Stores original local ritations of shards relative vase
     
     List<Shard> attachedShards = new(); // Contains shards currently attached to the vase during play
+
+    [SerializeField] int score = 0;
+    public static event Action ScoreEvent;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -45,16 +51,18 @@ public class Vase : MonoBehaviour
         float posDelta = CalcPosDiff(shardTf.localPosition, destPos); // This can also be used for scoring
         float rotDelta = CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot); // This can also be used for scoring
 
-
+        // Check if perfect attach
         if (posDelta < posMargin && rotDelta < rotMargin)
         {
             shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
             posDelta = 0;
             rotDelta = 0;
+            score = score + 2;
         }
-
+        // Normal score is +1, perfect is 3 = 2 + 1;
+        score = score + 1;
     }
-    
+
     float CalcPosDiff(Vector3 current, Vector3 target)
     {
         return Vector3.Magnitude(target - current);
@@ -66,6 +74,15 @@ public class Vase : MonoBehaviour
         if (diff > 180) diff = 360 - diff;
 
         return diff;
+    }
+
+    /// <summary>
+    /// Returns the score of the vase with some random tip
+    /// </summary>
+    /// <returns></returns>
+    public int GetScore()
+    {
+        return score * 10 + UnityEngine.Random.Range(0, 10);
     }
 
     /// <summary>
