@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &1999690161900271394
@@ -387,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 1
   parentVase: {fileID: 6142175574300826282}
 --- !u!1 &2101066197084089305
@@ -437,6 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &5027248826052903593
@@ -642,6 +645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &8256072061292258203
@@ -862,6 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &133664359166281922
@@ -1026,7 +1031,7 @@ GameObject:
   - component: {fileID: 5792782619484563099}
   - component: {fileID: 7936350852968086573}
   - component: {fileID: 6142175574300826282}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -1153,6 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &999354228094185936
@@ -1353,6 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &2693005394865082012
@@ -1570,6 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
+  ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &8163885502610037820
