@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Shard : MonoBehaviour
 {
+    [SerializeField] AudioClip collisionSound;
+
     public bool isAttached = false;
 
     [SerializeField, Tooltip("Must be defined for base shard.")]
@@ -47,6 +49,8 @@ public class Shard : MonoBehaviour
         if (parentVase) return;
 
         if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Shard")) return; // Has to get layer through collider. gameObject has layer of root rb (Vase)
+
+        AudioManager.Instance.PlayClip(collisionSound);
 
         Shard collidedShard = collision.collider.GetComponent<Shard>();
         collidedShard.parentVase.AttachShard(this);

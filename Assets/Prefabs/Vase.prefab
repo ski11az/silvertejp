@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &1999690161900271394
@@ -385,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 1
   parentVase: {fileID: 6142175574300826282}
 --- !u!1 &2101066197084089305
@@ -434,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &5027248826052903593
@@ -638,6 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &8256072061292258203
@@ -857,6 +861,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &133664359166281922
@@ -1098,7 +1103,7 @@ MonoBehaviour:
   - {fileID: 766286016360157589}
   - {fileID: 8666347249975038482}
   - {fileID: 5755995234723116283}
-  posMargin: 0.1
+  posMargin: 0.2
   rotMargin: 45
 --- !u!1 &5902695451497106559
 GameObject:
@@ -1147,6 +1152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &999354228094185936
@@ -1346,6 +1352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &2693005394865082012
@@ -1562,6 +1569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
   isAttached: 0
   parentVase: {fileID: 0}
 --- !u!212 &8163885502610037820
