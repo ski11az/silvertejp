@@ -1291,22 +1291,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2301780844288961122, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 2301780844288961122, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 2847505122425914984, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2847505122425914984, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.97
-      objectReference: {fileID: 0}
     - target: {fileID: 5792782619484563099, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1350,46 +1334,6 @@ PrefabInstance:
     - target: {fileID: 5800398840506345878, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
       propertyPath: m_Name
       value: Vase
-      objectReference: {fileID: 0}
-    - target: {fileID: 6674276287890083635, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 6674276287890083635, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.7315
-      objectReference: {fileID: 0}
-    - target: {fileID: 6981216071700682963, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6981216071700682963, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 8303888719684958746, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 8303888719684958746, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.1525
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689744328890409381, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8689744328890409381, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090880383663622950, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 9090880383663622950, guid: 89bc47d242bf01e4e997e19ba3ddda7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
