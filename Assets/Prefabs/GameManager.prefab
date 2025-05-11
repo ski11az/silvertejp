@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vase: {fileID: 0}
+  deliveryBox: {fileID: 0}
   clickRadius: 1
   spawnHeight: 5
   spawnOffsetScaler: 3
@@ -74,7 +75,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -5068563415619911066, guid: 2ec2353d8c66d6f46889c1f2a4e4f013, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dcbde9ad76e325947add4ad085742638, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
