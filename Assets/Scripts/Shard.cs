@@ -3,6 +3,7 @@ using UnityEngine;
 public class Shard : MonoBehaviour
 {
     [SerializeField] AudioClip collisionSound;
+    [SerializeField] AudioClip tapeSound;
     [SerializeField] GameObject ductTapePrefab;
 
     public bool isAttached = false;
@@ -52,6 +53,7 @@ public class Shard : MonoBehaviour
         if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Shard")) return; // Has to get layer through collider. gameObject has layer of root rb (Vase)
 
         AudioManager.Instance.PlayClip(collisionSound);
+        AudioManager.Instance.PlayClip(tapeSound);
 
         Shard collidedShard = collision.collider.GetComponent<Shard>();
 
