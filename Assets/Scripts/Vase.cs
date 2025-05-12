@@ -18,6 +18,8 @@ public class Vase : MonoBehaviour
 
     [SerializeField] int score = 0;
 
+    public bool hasBeenDestroyed = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -48,19 +50,22 @@ public class Vase : MonoBehaviour
 
         Transform shardTf = shard.transform;
 
-        Vector3 destPos = posByShard[shard];
-        float destRot = rotByShard[shard];
-
-        float posDelta = CalcPosDiff(shardTf.localPosition, destPos); // This can also be used for scoring
-        float rotDelta = CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot); // This can also be used for scoring
-
-        // Check if perfect attach
-        if (posDelta < posMargin && rotDelta < rotMargin)
+        if (posByShard.ContainsKey(shard))
         {
-            shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
-            posDelta = 0;
-            rotDelta = 0;
-            score = score + 2;
+            Vector3 destPos = posByShard[shard];
+            float destRot = rotByShard[shard];
+
+            float posDelta = CalcPosDiff(shardTf.localPosition, destPos); // This can also be used for scoring
+            float rotDelta = CalcRotDiff(shardTf.localRotation.eulerAngles.z, destRot); // This can also be used for scoring
+
+            // Check if perfect attach
+            if (posDelta < posMargin && rotDelta < rotMargin)
+            {
+                shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
+                posDelta = 0;
+                rotDelta = 0;
+                score = score + 2;
+            }
         }
         // Normal score is +1, perfect is 3 = 2 + 1;
         score = score + 1;

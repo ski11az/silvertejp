@@ -38,13 +38,6 @@ public class GameManager : MonoBehaviour
         shatterBox.VaseDestroyed -= StartNewVase;
     }
 
-    private void IncreaseScore(int value)
-    {
-        score += value;
-        ScoreChanged?.Invoke(score);
-        StartNewVase();
-    }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -52,10 +45,27 @@ public class GameManager : MonoBehaviour
         ScoreChanged?.Invoke(score);
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+
+        TrySpawnShard();
+    }
+
+    private void IncreaseScore(int value)
+    {
+        score += value;
+        ScoreChanged?.Invoke(score);
+        StartNewVase();
+    }
+
     private void StartNewVase()
     {
         currentVase = Instantiate(vasePrefab, new Vector3(0, spawnHeight, 0), Quaternion.identity);
         PrepareShards();
+        timeOfLastShardSpawn = Time.time;
     }
 
     private void PrepareShards()
@@ -67,15 +77,6 @@ public class GameManager : MonoBehaviour
             shard.Detach();
             //shard.gameObject.SetActive(false); // Could cause problems with execution order with Vase filling dictionaries
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
-
-        TrySpawnShard();
     }
 
     private void TrySpawnShard()

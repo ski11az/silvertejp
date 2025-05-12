@@ -15,11 +15,15 @@ public class DeliveryBox : MonoBehaviour
         if (rootObj.layer != LayerMask.NameToLayer("Vase")) return;
 
         Vase deliveredVase = rootObj.GetComponent<Vase>();
+
+        if (deliveredVase.hasBeenDestroyed) return;
+        deliveredVase.hasBeenDestroyed = true;
+
         int value = deliveredVase.GetScore();
 
         AudioManager.Instance.PlayClip(sellSound);
-        VaseDelivered?.Invoke(value);
 
         Destroy(deliveredVase.gameObject);
+        VaseDelivered?.Invoke(value);
     }
 }

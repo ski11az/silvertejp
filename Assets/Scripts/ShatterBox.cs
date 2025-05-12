@@ -14,9 +14,14 @@ public class ShatterBox : MonoBehaviour
         GameObject rootObj = collision.attachedRigidbody.gameObject;
         if (rootObj.layer != LayerMask.NameToLayer("Vase")) return;
 
+        Vase deliveredVase = rootObj.GetComponent<Vase>();
+
+        if (deliveredVase.hasBeenDestroyed) return;
+        deliveredVase.hasBeenDestroyed = true;
+
         AudioManager.Instance.PlayClip(shatterSound);
-        VaseDestroyed?.Invoke();
 
         Destroy(rootObj);
+        VaseDestroyed?.Invoke();
     }
 }
