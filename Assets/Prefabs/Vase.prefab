@@ -392,7 +392,7 @@ MonoBehaviour:
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   isAttached: 1
-  parentVase: {fileID: 6142175574300826282}
+  parentVase: {fileID: 0}
 --- !u!1 &2101066197084089305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,6 +1116,7 @@ MonoBehaviour:
   posMargin: 0.2
   rotMargin: 45
   score: 0
+  hasBeenDestroyed: 0
 --- !u!1 &5902695451497106559
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Slider masterSlider;
     [SerializeField] Slider musicSlider;
 
+    [SerializeField] GameObject quitButton;
+
     private static bool isInitialized = false;
 
     private void Start()
@@ -25,6 +27,10 @@ public class MainMenu : MonoBehaviour
             masterSlider.value = Mathf.Pow(10, (AudioManager.Instance.GetMasterVolume() / 20));
             musicSlider.value = Mathf.Pow(10, (AudioManager.Instance.GetMusicVolume() / 20));
         }
+
+#if UNITY_WEBGL
+        quitButton.SetActive(false);
+#endif
     }
 
     public void LoadLevel(string levelName)

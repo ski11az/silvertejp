@@ -131,17 +131,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4970061356947287315, guid: ebf9c3b0f813b3f4d997338eae53c429, type: 3}
-      propertyPath: sellSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 1b581050e3e364dc4b340f4aa3645a9d, type: 3}
     - target: {fileID: 7121995921726060936, guid: ebf9c3b0f813b3f4d997338eae53c429, type: 3}
       propertyPath: m_Name
       value: DeliveryBox
-      objectReference: {fileID: 0}
-    - target: {fileID: 8614512510402047327, guid: ebf9c3b0f813b3f4d997338eae53c429, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8614512510402047327, guid: ebf9c3b0f813b3f4d997338eae53c429, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,10 +359,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3530675164697395534, guid: 221aa59cebe9bc3409abbd482cd284f0, type: 3}
-      propertyPath: shatterSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}
     - target: {fileID: 7121995921726060936, guid: 221aa59cebe9bc3409abbd482cd284f0, type: 3}
       propertyPath: m_Name
       value: ShatterBox
@@ -580,21 +568,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 863881665853562147, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 863881665853562147, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.52
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4473758131925156621, guid: 7e43b501dbe4342eb8635702b66baad6, type: 3}
       propertyPath: m_LocalPosition.z

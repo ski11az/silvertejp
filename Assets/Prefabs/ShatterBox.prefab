@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adcd74115aad0d4b899cad0bf7b799f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shatterSound: {fileID: 0}
+  shatterSound: {fileID: 8300000, guid: e15f3487b28e809408bfb3f4b95ab7a1, type: 3}

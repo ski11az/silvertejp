@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] DeliveryBox deliveryBox;
     [SerializeField] ShatterBox shatterBox;
 
-    [SerializeField] float clickRadius = 1.0f;
-
     [SerializeField] float spawnHeight = 5;
     [SerializeField] float spawnOffsetScaler = 1;
 
