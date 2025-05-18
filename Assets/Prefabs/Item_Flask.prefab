@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -246,6 +246,7 @@ MonoBehaviour:
   - {fileID: 4724068394324347785}
   - {fileID: 6822272023123648429}
   perfectParticles: {fileID: 7219119649472717551}
+  perfectSound: {fileID: 8300000, guid: d2e2c7ff0db9ea14a871149941524ddb, type: 3}
   posMargin: 0.3
   rotMargin: 45
   score: 0
@@ -375,7 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -541,7 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -727,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -914,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -1100,7 +1101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0
@@ -1293,7 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b54f6d74a90e94fb45b630a126945c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
+  collisionSound: {fileID: 8300000, guid: 54beeb0d92c2bd9499720b90ddbef252, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
   Value: 0

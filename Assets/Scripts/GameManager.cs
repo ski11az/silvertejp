@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
         Vector3 spawnPos = new(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
 
-        if (Random.Range(0.0f, 1.0f) > 0.1f)
+        if (Random.Range(0.0f, 1.0f) > 0.2f)
         {
             Shard spawnedShard = currentShards[0];
             spawnedShard.transform.position = spawnPos;

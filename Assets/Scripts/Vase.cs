@@ -9,6 +9,7 @@ public class Vase : MonoBehaviour
     [SerializeField] List<Shard> shards; // Contains shards belonging to this vase
 
     [SerializeField] ParticleSystem perfectParticles;
+    [SerializeField] AudioClip perfectSound;
 
     [SerializeField] float posMargin = 0.1f;
     [SerializeField] float rotMargin = 10.0f;
@@ -69,6 +70,7 @@ public class Vase : MonoBehaviour
                 score += 2;
                 perfectParticles.transform.position = shardTf.position;
                 perfectParticles.Play();
+                AudioManager.Instance.PlayClip(perfectSound);
             }
             // Normal score is +1, perfect is 3 = 2 + 1;
             score += 1;

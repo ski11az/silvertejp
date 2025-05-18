@@ -672,7 +672,7 @@ PrefabInstance:
     - target: {fileID: 3882246911474788864, guid: 0e47b98ec1a2bb64ca504be5844a4360, type: 3}
       propertyPath: vasePrefab
       value: 
-      objectReference: {fileID: 5377380437043123323, guid: d69adc9e8f2eacc419f61d7a25104572, type: 3}
+      objectReference: {fileID: 5377380437043123323, guid: fa81759c22992204fb42906d020cc166, type: 3}
     - target: {fileID: 3882246911474788864, guid: 0e47b98ec1a2bb64ca504be5844a4360, type: 3}
       propertyPath: deliveryBox
       value: 
