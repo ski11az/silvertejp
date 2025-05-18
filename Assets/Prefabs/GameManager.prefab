@@ -55,4 +55,4 @@ MonoBehaviour:
   - {fileID: 6135741022822402610, guid: 23a2f75f3e260274aab97462337cd6fa, type: 3}
   - {fileID: 6135741022822402610, guid: 97be2dce52ca3a249ae36865a82f84d8, type: 3}
   spawnHeight: 5
-  spawnOffsetScaler: 3
+  spawnOffsetScaler: 2.6

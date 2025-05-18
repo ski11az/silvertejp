@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public static event Action<int> ScoreChanged;
     public static event Action AllShardsUsed;
+    public static event Action<Vase> StartedVase;
 
     [SerializeField] Vase[] vasePrefabs;
     [SerializeField] DeliveryBox deliveryBox;
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
     {
         Vase vaseToSpawn = vasePrefabs[Random.Range(0, vasePrefabs.Length)];
         currentVase = Instantiate(vaseToSpawn, new Vector3(0, spawnHeight, 0), Quaternion.identity);
+        StartedVase?.Invoke(vaseToSpawn);
         PrepareShards();
         timeOfLastShardSpawn = Time.time;
     }

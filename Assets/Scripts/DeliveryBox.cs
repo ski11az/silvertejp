@@ -6,7 +6,7 @@ using UnityEngine;
 public class DeliveryBox : MonoBehaviour
 {
     public event Action<int> VaseDelivered;
-
+    [SerializeField] ParticleSystem sellParticles; 
     [SerializeField] AudioClip sellSound;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,6 +22,7 @@ public class DeliveryBox : MonoBehaviour
         int value = deliveredVase.GetScore();
 
         AudioManager.Instance.PlayClip(sellSound);
+        sellParticles.Play();
 
         Destroy(deliveredVase.gameObject);
         VaseDelivered?.Invoke(value);
