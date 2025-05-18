@@ -102,6 +102,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &6382185674308916912
@@ -222,6 +223,7 @@ Transform:
   - {fileID: 8990383428797374172}
   - {fileID: 1709118222173016625}
   - {fileID: 6026580283914166134}
+  - {fileID: 5244813223182169334}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5377380437043123323
@@ -243,6 +245,7 @@ MonoBehaviour:
   - {fileID: 5516638522386058772}
   - {fileID: 4724068394324347785}
   - {fileID: 6822272023123648429}
+  perfectParticles: {fileID: 7219119649472717551}
   posMargin: 0.3
   rotMargin: 45
   score: 0
@@ -285,7 +288,7 @@ GameObject:
   - component: {fileID: 8711194267223030178}
   - component: {fileID: 3253111365518937216}
   - component: {fileID: 4774725961123583770}
-  - component: {fileID: 3560740480129913605}
+  - component: {fileID: 1171770575929785731}
   m_Layer: 9
   m_Name: Flask_0
   m_TagString: Untagged
@@ -375,9 +378,10 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 5377380437043123323}
---- !u!60 &3560740480129913605
+--- !u!60 &1171770575929785731
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,6 +544,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &774177522183760774
@@ -725,6 +730,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &4477700446724393134
@@ -911,6 +917,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &189332293952688837
@@ -1096,6 +1103,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &7786256149179779807
@@ -1288,6 +1296,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &2646493221653406298
@@ -1367,3 +1376,70 @@ PolygonCollider2D:
       - {x: -0.74, y: 1.29}
       - {x: -0.29, y: 0}
   m_UseDelaunayMesh: 0
+--- !u!1001 &1506617525382340507
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8926733981806863354}
+    m_Modifications:
+    - target: {fileID: 4873115270894664315, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_Name
+      value: StarExplosion_Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+--- !u!4 &5244813223182169334 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+  m_PrefabInstance: {fileID: 1506617525382340507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7219119649472717551 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8126714443655019892, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+  m_PrefabInstance: {fileID: 1506617525382340507}
+  m_PrefabAsset: {fileID: 0}

@@ -102,6 +102,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &5520763763637726434
@@ -285,6 +286,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 5022887170523699132}
 --- !u!60 &5178705631347553879
@@ -452,6 +454,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &1964096619252512673
@@ -637,6 +640,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &293583299758530230
@@ -823,6 +827,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &2836859327633950933
@@ -945,6 +950,7 @@ Transform:
   - {fileID: 3821740033107364541}
   - {fileID: 5545308785485245430}
   - {fileID: 2429203369782834274}
+  - {fileID: 3188967239452788808}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5022887170523699132
@@ -967,6 +973,7 @@ MonoBehaviour:
   - {fileID: 6535943965261198134}
   - {fileID: 5807444166660926996}
   - {fileID: 3945776410589211280}
+  perfectParticles: {fileID: 47105324186295889}
   posMargin: 0.3
   rotMargin: 45
   score: 0
@@ -1100,6 +1107,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &1465791439547410776
@@ -1283,6 +1291,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &1992285758291706901
@@ -1469,6 +1478,7 @@ MonoBehaviour:
   collisionSound: {fileID: 8300000, guid: 5867d7213fd474e96a02378f261b705c, type: 3}
   tapeSound: {fileID: 8300000, guid: 386884862b94ee344aca952100e88ade, type: 3}
   ductTapePrefab: {fileID: 5927378209622534390, guid: 4966c4f5b7334b24a81bb6b5fbb86f58, type: 3}
+  Value: 0
   isAttached: 1
   parentVase: {fileID: 0}
 --- !u!50 &495868520101460835
@@ -1550,3 +1560,70 @@ PolygonCollider2D:
       - {x: 1.2149999, y: 0.45999998}
       - {x: 0.72499996, y: -0.51}
   m_UseDelaunayMesh: 0
+--- !u!1001 &8097676296755127077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6657993097946370555}
+    m_Modifications:
+    - target: {fileID: 4873115270894664315, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_Name
+      value: StarExplosion_Particles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+--- !u!198 &47105324186295889 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8126714443655019892, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+  m_PrefabInstance: {fileID: 8097676296755127077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3188967239452788808 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6638804473726741357, guid: 906eb08b753a15545a7272427beb60e7, type: 3}
+  m_PrefabInstance: {fileID: 8097676296755127077}
+  m_PrefabAsset: {fileID: 0}

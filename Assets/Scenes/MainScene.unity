@@ -474,8 +474,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -955651417
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4a5bf8303f74847cc9cf715f83332e55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -669,6 +669,10 @@ PrefabInstance:
       propertyPath: shatterBox
       value: 
       objectReference: {fileID: 1769011097}
+    - target: {fileID: 3882246911474788864, guid: 0e47b98ec1a2bb64ca504be5844a4360, type: 3}
+      propertyPath: vasePrefab
+      value: 
+      objectReference: {fileID: 5377380437043123323, guid: d69adc9e8f2eacc419f61d7a25104572, type: 3}
     - target: {fileID: 3882246911474788864, guid: 0e47b98ec1a2bb64ca504be5844a4360, type: 3}
       propertyPath: deliveryBox
       value: 

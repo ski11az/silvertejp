@@ -8,6 +8,8 @@ public class Vase : MonoBehaviour
 {
     [SerializeField] List<Shard> shards; // Contains shards belonging to this vase
 
+    [SerializeField] ParticleSystem perfectParticles;
+
     [SerializeField] float posMargin = 0.1f;
     [SerializeField] float rotMargin = 10.0f;
 
@@ -65,6 +67,8 @@ public class Vase : MonoBehaviour
                 posDelta = 0;
                 rotDelta = 0;
                 score += 2;
+                perfectParticles.transform.position = shardTf.position;
+                perfectParticles.Play();
             }
             // Normal score is +1, perfect is 3 = 2 + 1;
             score += 1;
