@@ -13,7 +13,7 @@ public class Shard : MonoBehaviour
     [SerializeField, Tooltip("Must be defined for base shard.")]
     Vase parentVase = null;
     Rigidbody2D rb;
-    static float maxSpeed = 3f;
+    public static float maxSpeed = 3f;
 
     private void Awake()
     {

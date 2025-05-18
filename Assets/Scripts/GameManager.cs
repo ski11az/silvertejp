@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static event Action<int> ScoreChanged;
     public static event Action AllShardsUsed;
 
-    [SerializeField] Vase vasePrefab;
+    [SerializeField] Vase[] vasePrefabs;
     [SerializeField] DeliveryBox deliveryBox;
     [SerializeField] ShatterBox shatterBox;
 
@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
 
     float timeOfLastShardSpawn = 0;
 
-    private int score = 0;
+    float spawnDelay = 5.0f;
+    int score = 0;
 
     private void OnEnable()
     {
@@ -59,11 +60,13 @@ public class GameManager : MonoBehaviour
         score += value;
         ScoreChanged?.Invoke(score);
         StartNewVase();
+        spawnDelay *= 0.90f;
     }
 
     private void StartNewVase()
     {
-        currentVase = Instantiate(vasePrefab, new Vector3(0, spawnHeight, 0), Quaternion.identity);
+        Vase vaseToSpawn = vasePrefabs[Random.Range(0, vasePrefabs.Length)];
+        currentVase = Instantiate(vaseToSpawn, new Vector3(0, spawnHeight, 0), Quaternion.identity);
         PrepareShards();
         timeOfLastShardSpawn = Time.time;
     }
@@ -81,7 +84,7 @@ public class GameManager : MonoBehaviour
 
     private void TrySpawnShard()
     {
-        if (Time.time < timeOfLastShardSpawn + 5) return;
+        if (Time.time < timeOfLastShardSpawn + spawnDelay) return;
 
         timeOfLastShardSpawn = Time.time;
 

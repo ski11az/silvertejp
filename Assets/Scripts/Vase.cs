@@ -21,6 +21,7 @@ public class Vase : MonoBehaviour
 
     [SerializeField] int score = 0;
 
+    public bool hasBeenCompleted = false;
     public bool hasBeenDestroyed = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
