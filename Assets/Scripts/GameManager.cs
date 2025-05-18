@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] DeliveryBox deliveryBox;
     [SerializeField] ShatterBox shatterBox;
 
+    [SerializeField] Shard[] junk;
+
     [SerializeField] float spawnHeight = 5;
     [SerializeField] float spawnOffsetScaler = 1;
 
@@ -89,9 +91,19 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        Shard spawnedShard = currentShards[0];
-        spawnedShard.transform.position = new Vector3(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
-        spawnedShard.gameObject.SetActive(true);
-        currentShards.RemoveAt(0);
+        Vector3 spawnPos = new(spawnOffsetScaler * Random.Range(-1.0f, 1.0f), spawnHeight, 0);
+
+        if (Random.Range(0.0f, 1.0f) > 0.1f)
+        {
+            Shard spawnedShard = currentShards[0];
+            spawnedShard.transform.position = spawnPos;
+            spawnedShard.gameObject.SetActive(true);
+            currentShards.RemoveAt(0);
+        }
+        else
+        {
+            Instantiate(junk[Random.Range(0, junk.Length)], spawnPos, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+        }
+
     }
 }

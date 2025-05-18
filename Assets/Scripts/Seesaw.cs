@@ -17,7 +17,6 @@ public class Seesaw : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Shit works");
         m_Rigidbody = GetComponent<Rigidbody2D>();
     }
 

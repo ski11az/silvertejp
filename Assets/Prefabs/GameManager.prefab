@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 479390947643629438}
   - component: {fileID: 3882246911474788864}
   m_Layer: 0
-  m_Name: GameManager 1
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,8 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9baac57150cee146974d0b6a32a6cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vasePrefab: {fileID: 5377380437043123323, guid: d69adc9e8f2eacc419f61d7a25104572, type: 3}
+  vasePrefab: {fileID: 5022887170523699132, guid: 772e690ad30b2a24a8c3d20ed067f5d3, type: 3}
   deliveryBox: {fileID: 0}
   shatterBox: {fileID: 0}
+  junk:
+  - {fileID: 6135741022822402610, guid: 9eedda331df07aa40ba25276863cc128, type: 3}
+  - {fileID: 6135741022822402610, guid: 23a2f75f3e260274aab97462337cd6fa, type: 3}
+  - {fileID: 6135741022822402610, guid: 97be2dce52ca3a249ae36865a82f84d8, type: 3}
   spawnHeight: 5
   spawnOffsetScaler: 3

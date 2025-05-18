@@ -6,6 +6,8 @@ public class Shard : MonoBehaviour
     [SerializeField] AudioClip tapeSound;
     [SerializeField] GameObject ductTapePrefab;
 
+    public int Value = 0;
+
     public bool isAttached = false;
 
     [SerializeField, Tooltip("Must be defined for base shard.")]
@@ -55,7 +57,7 @@ public class Shard : MonoBehaviour
     {
         if (parentVase) return;
 
-        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Shard")) return; // Has to get layer through collider. gameObject has layer of root rb (Vase)
+        if (collision.collider.gameObject.layer != LayerMask.NameToLayer("Shard")) return; // Have to get layer through collider. gameObject has layer of root rb (Vase)
 
         AudioManager.Instance.PlayClip(collisionSound);
         AudioManager.Instance.PlayClip(tapeSound);

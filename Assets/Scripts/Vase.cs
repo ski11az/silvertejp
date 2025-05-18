@@ -64,11 +64,15 @@ public class Vase : MonoBehaviour
                 shardTf.SetLocalPositionAndRotation(destPos, Quaternion.Euler(0, 0, destRot));
                 posDelta = 0;
                 rotDelta = 0;
-                score = score + 2;
+                score += 2;
             }
+            // Normal score is +1, perfect is 3 = 2 + 1;
+            score += 1;
         }
-        // Normal score is +1, perfect is 3 = 2 + 1;
-        score = score + 1;
+        else
+        {
+            score += shard.Value;
+        }
     }
 
     float CalcPosDiff(Vector3 current, Vector3 target)
