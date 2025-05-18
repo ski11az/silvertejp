@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9c01f41f77dc064c9c63c3371dbe26b
+guid: e4c0ec56bbc58854ca5b07257783d729
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -53,7 +53,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0.2
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -93,54 +93,33 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape:
-    - - {x: 123, y: -123.5}
-      - {x: 144, y: -100.5}
-      - {x: 148, y: -97.5}
-      - {x: 148, y: -89.5}
-      - {x: 146, y: -83.5}
-      - {x: 122, y: -42.5}
-      - {x: 108, y: -17.5}
-      - {x: 104, y: -10.5}
-      - {x: 94, y: 7.5}
-      - {x: 90, y: 14.5}
-      - {x: 80, y: 32.5}
-      - {x: 76, y: 39.5}
-      - {x: 71, y: 48.5}
-      - {x: 67, y: 55.5}
-      - {x: 57, y: 73.5}
-      - {x: 53, y: 80.5}
-      - {x: 48, y: 89.5}
-      - {x: 30, y: 121.5}
-      - {x: 7, y: 162.5}
-      - {x: 3, y: 166.5}
-      - {x: 0, y: 166.5}
-      - {x: -10, y: 161.5}
-      - {x: -24, y: 152.5}
-      - {x: -49, y: 135.5}
-      - {x: -83, y: 113.5}
-      - {x: -112, y: 95.5}
-      - {x: -129, y: 84.5}
-      - {x: -132, y: 81.5}
-      - {x: -137, y: 60.5}
-      - {x: -140, y: 42.5}
-      - {x: -143, y: 23.5}
-      - {x: -145, y: 9.5}
-      - {x: -147, y: -9.5}
-      - {x: -148, y: -20.5}
-      - {x: -148, y: -98.5}
-      - {x: -147, y: -99.5}
-      - {x: -144, y: -100.5}
-      - {x: -128, y: -105.5}
-      - {x: 2, y: -144.5}
-      - {x: 55, y: -160.5}
-      - {x: 75, y: -166.5}
-      - {x: 83, y: -166.5}
-      - {x: 90, y: -159.5}
+    - - {x: 8, y: -38.5}
+      - {x: 0, y: -37.5}
+      - {x: -43, y: -71.5}
+      - {x: -62, y: -51.5}
+      - {x: -83, y: -19.5}
+      - {x: -97, y: 23.5}
+      - {x: -100, y: 69.5}
+      - {x: -30, y: 14.5}
+      - {x: 95, y: 22.5}
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 1537655665
